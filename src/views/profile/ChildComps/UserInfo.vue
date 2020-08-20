@@ -1,26 +1,18 @@
 <template>
-  <div id="user-info">
-    <a href="#" class="clear-fix">
-      <slot name="user-icon">
-        <svg class="privateImage-svg left">
-          <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#avatar-default"></use>
-        </svg>
-      </slot>
-      <div class="login-info left">
-        <slot name="user-nickname">
-          <div>登录/注册</div>
-        </slot>
-        <div class="phone">
-          <span>
-            <svg data-v-735ff1be="" fill="#fff" class="icon-mobile">
-              <use data-v-735ff1be="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#mobile"></use>
-            </svg>
-          </span>
-          <slot name="user-phone">暂无绑定手机号</slot>
-        </div>
+  <div class="user-info">
+    <div class="user-img">
+      <img src="~assets/img//profile/user.png" alt="">
+    </div>
+    <div class="login">
+      <p>登录/注册</p>
+      <div class="phone">
+        <img src="~assets/img//profile/phone.png" alt="" class="icon-phone">
+        <p>暂未绑定手机号</p>
       </div>
-      <svg data-v-735ff1be="" fill="#fff" class="arrow-svg right"><use data-v-735ff1be="" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-right"></use></svg>
-    </a>
+    </div>
+    <div class="right">
+      <img src="~assets/img//profile/arrow_right.png" alt="">
+    </div>
   </div>
 </template>
 
@@ -31,49 +23,58 @@
 </script>
 
 <style scoped>
-  #user-info {
+  .user-info{
+    position: relative;/*相对定位*/
+    display: flex;/*浮动*/
+    align-items: center;
+    width: 100%;
+    height: 105px;
+    padding: 0 20px;
     background-color: var(--color-tint);
-    padding: 15px;
-    margin-top: -5px;
-  }
 
-  #user-info .privateImage-svg {
+  }
+  .user-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  .user-img img{
+    display: block;
     width: 60px;
     height: 60px;
-    background-color: #fff;
-    border-radius: 30px;
   }
-
-  .left {
-    float: left;
+  .login{
+    font-size: 16px;
+    margin-left: 20px;/*距离左边的距离*/
+    color: white;
   }
-
-  #user-info .arrow-svg {
-    width: 11px;
-    height: 22px;
-    margin-top: 18px;
+  .login p{
+    font-size: 18px;
   }
-
-  #user-info .login-info {
-    color: #fff;
-    margin: 10px 0 0 10px;
+  .phone{
+    display: flex;/*浮动*/
+    margin-top: 8px;
+    text-align:center;
   }
-
-  #user-info .login-info .phone {
-    position: relative;
-
-    font-size: 13px;
-    margin-top: 5px;
-    margin-left: 15px;
-    font-weight: 300;
+  .phone p{
+    font-size: 12px;
+    margin-left: 3px;
+    margin-top: 3px;
   }
-
-  #user-info .login-info .phone .icon-mobile {
-    position: absolute;
-    width: 12px;
-    height: 18px;
-    left: -15px;
-    top: 0px;
+  .right{
+    position: absolute;/*绝对定位*/
+    right: 10px;
+    width: 20px;
+    height: 20px;
+  }
+  .right img{
+    display: inline-block;
+    /*使元素变成块级元素，独占一行，在不设置自己的宽度的情况下，块级元素会默认填满父级元素的宽度.*/
+    width: 20px;
+    height: 20px;
   }
 </style>
-le>

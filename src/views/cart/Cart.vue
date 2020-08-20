@@ -42,7 +42,7 @@
   }
 
   .nav-bar{
-    background-color: #ff5777;
+    background-color: var(--color-tint);
     color: #ffffff;
     /*font-weight:650;*/
   }

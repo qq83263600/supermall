@@ -15,7 +15,7 @@
       path:String,
       activeColor:{
         type:String,
-        default:'red'
+        default:'var(--color-tint)'
       }
     },
     data(){
